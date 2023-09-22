@@ -1,0 +1,145 @@
+header {
+    height: 100vh;
+    background-color: #EAEFF6;
+    background-image: url('../img/header_bg.png');
+    .container {
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;;
+            padding-top: 20px;
+            min-height: 56px;
+            &__logo {
+                display: flex;
+                align-items: baseline;
+                max-height: 46px;
+                span {
+                    text-transform: uppercase;
+                    font-family: var(--primary-font);
+                    font-weight: 600;
+                    font-size: 26px;
+                    color: var(--logo-color);
+                    margin-left: 9px;
+                }
+            }
+            &__nav {
+                min-height: 56px;
+                display: flex;
+                align-items: flex-end;
+                &__list {
+                    display: flex;  
+                    .active {
+                        border-bottom: 1px solid #597193;
+                    }
+                    li {
+                        border: 1px solid transparent;
+                        margin: 0 15px;
+                        &:hover {
+                            border-bottom: 1px solid #597193;
+                        }
+                        .active {
+                            color: #597193;
+                        }
+                        a {
+                            font-family: var(--secondary-font);
+                            font-size: 18px;
+                            color: #353637;
+                            &:hover {
+                                color: #597193;
+                            } 
+                        }
+                    }
+                }
+            }
+            &_btn {
+                width: 135px;
+                height: 40px;
+                cursor: pointer;
+                background-color: #597193;
+                color: #ffffff;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--primary-font);
+                font-weight: 400;
+                font-size: 16px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                &:hover {
+                    background-color: #405969;
+                    color: #ffffff;
+                }
+            }
+               
+        }
+
+
+
+
+
+
+
+
+        .header_middle {
+            min-height: 610px;
+        }
+        .header_bottom {
+            // max-width: 100%;
+            text-align: center;
+            span {
+                display: block;
+                font-family: var(--primary-font);
+                font-weight: 400;
+                font-size: 16px;
+                color: #597193;
+            }
+            .scroll-down {
+                width: 30px;
+                height: 50px;
+                border: 2px solid #597193;
+                border-radius: 50px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 20px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    transform: translateX(-50%);
+                    background: #597193;
+                    animation: scrollDown 1.5s ease infinite;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 5px;
+                    width: 6px;
+                    height: 15px;
+                    border-radius: 3px;
+                    transform: translateX(-50%);
+                    background: #597193;
+                }
+            }
+            @keyframes scrollDown {
+                0%{
+                    transform: translate(-50%, 0px);
+                    opacity: 0;
+                }
+                50%{
+                    transform: translate(-50%, 8px);
+                    opacity: 1;
+                }
+                100%{
+                    transform: translate(-50%, 16px);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+                
+}

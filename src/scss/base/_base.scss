@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Merriweather:wght@300&family=Open+Sans:wght@300;400;600;700&family=Work+Sans:wght@400;500&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-color);
+    font-family: var(--font-main);
+}
+
+// font-family: 'Average Sans', sans-serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Work Sans', sans-serif;
+
+.font {
+	font-size: 48px;
+	font-family: var(--primary-font);
+	font-weight: var(--accent-font);
+}
