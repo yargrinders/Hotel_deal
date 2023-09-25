@@ -37,7 +37,17 @@
     <div class="bar"></div>
     <div class="bar"></div>
 </div>
-            <button class="header_top_btn">Reservation</button>           
+            <!-- Кнопка для открытия модального окна -->
+            <button class="header_top_btn" id="openModal">Reservation</button>   
+            <!-- Модальное окно (начально скрытое) -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <!-- Заголовок и содержимое вашего модального окна -->
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Заголовок модального окна</h2>
+                    <p>Содержимое модального окна здесь...</p>
+                </div>
+            </div>        
         </div>
         <div class="header_middle">
             <div class="header_middle__left">
