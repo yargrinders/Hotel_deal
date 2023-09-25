@@ -10,7 +10,7 @@
                     <li>Установить и развернуть Проэкт "Hotel_deal" в "Раздел 1"</li>
                     <li>Подготовить рабочую среду для работы в команде "Раздел 2</li>
                     <li>Ознакомиться с структурой сборки в "Раздел 3"</li>
-                    <li>Выполнить все пункты в "Раздел 4"</li>
+                    <li class="red_li">Выполнить все пункты в "Раздел 4"</li>
                     <li>Залить готовую ветку "Раздел 5"</li>
                 </ol>
             </p>
@@ -57,7 +57,65 @@
                 <h2 class="accordion-header">Раздел 3</h2>
                 <div class="accordion-content">
                     <h2>Содержимое раздела 3.</h2>
+                    <p>Моя сборка gulp простая и понятая. </p>
+                    <ol>
+                        <li>коммпанда "gulp" - запускает сборку в режиме разработчка. Создается папка "build"</li>
+                        <li>комманда "gulp docs" - запускает сборку в режим сдачи проэкта. Создается папка "docs" - это то что мы должны отдать заказчику - Это комманда - нужна для финальной тестировки макета</li>
+                        <li>папка src - это рабочая - в ней все для работы</li>
+                    </ol>
+                    <p>По моей структуре - много чего запутанно но постараюсь в двух словах. </p>
+                    <p>для выполнения пунктов из Раздела 4 - тебе понадобаться работа со следующими файлами</p>
+                    <ol>
+                        <li>html/blocks/header.html - Хедер инклюдит нав</li>
+                        <li>html/blocks/_nav.html - вся навигация</li>
+                        <li>scss/blocks/_header.scss стили думаю найдешь </li>
+                    </ol>
+                     
+                    <p>ознакомься с скрином</p>
+                    <img src="img/docs/3.png" alt="">
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">Раздел 4</h2>
+                <div class="accordion-content">
+                    <h2>Содержимое раздела 4.</h2>
+                    <p>У тебя две задачи</p>
+                    <h3 class="red_li">Первая</h3>
+                    <ol>
+                        <li class="red_li">Подсказка:</li>
+                        <li>имеется кнопка Reservation <img src="img/docs/4.png" alt=""></li>
+                        <li>Ее код находится в header.html <code>button class="header_top_btn">Reservation button</code></li>
+                        <li>ее стили в _header.scss</li>
+                        <li>так как код кнопки не входит в структуру файла _nav.html я добавил стиль display none на 768px ширине экрана и она проподает</li>
+                        <li class="red_li">Задача:</li>
+                        <li>При достижении экрана в 768px ширины - включается Burger Munu</li>
+                        <li>Нужно что бы кнопка "Reservation" появилась в списке Burger Munu последней </li>
+                        <li><img src="img/docs/5.png" alt=""></li>
+                    </ol>
+                    <h3 class="red_li">Вторая</h3>
+                    <ol>
+                        <li>Улучшить вид/стиль крестика </li>
+                        <li><img src="img/docs/6.png" alt=""></li>
+                    </ol>
+                    <h3 class="red_li">Третяя</h3>
+                    <ol>
+                        <li class="red_li">Добавить Анимации и стилей для Burger menu в соответствии к своим вкусам</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">Раздел 5</h2>
+                <div class="accordion-content">
+                    <h2>Содержимое раздела 5.</h2>
                     <p></p>
+                    <ol>
+                        <li>После Внесения изменений в ветку <span class="red_li">Burger</span> ее нужно залить на репозиторий / пошаговые комманды ниже</li>
+                        <ol>
+                            <li>git add .</li> Индексируйте ваши изменения
+                            <li>git commit -m 'Комментарий к ветке <span class="red_li">Burger</span>'</li> Создайте коммит (example Burger v.1.2)
+                            <li>git push origin <span class="red_li">Burger</span></li>И отправьте изменения на удаленный сервер
+                        </ol>
+                    </ol>
                 </div>
             </div>
         </div>
