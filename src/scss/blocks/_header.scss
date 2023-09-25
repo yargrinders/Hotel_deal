@@ -6,13 +6,15 @@ header {
         .header_top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;;
+            align-items: flex-end;
             padding-top: 20px;
             min-height: 56px;
+        
             &__logo {
                 display: flex;
                 align-items: baseline;
                 max-height: 46px;
+        
                 span {
                     text-transform: uppercase;
                     font-family: var(--primary-font);
@@ -22,35 +24,44 @@ header {
                     margin-left: 9px;
                 }
             }
+        
             &__nav {
                 min-height: 56px;
                 display: flex;
                 align-items: flex-end;
+        
                 &__list {
-                    display: flex;  
+                    display: flex;
+        
                     .active {
                         border-bottom: 1px solid #597193;
                     }
+        
                     li {
                         border: 1px solid transparent;
                         margin: 0 15px;
+        
                         &:hover {
                             border-bottom: 1px solid #597193;
                         }
+        
                         .active {
                             color: #597193;
                         }
+        
                         a {
                             font-family: var(--secondary-font);
                             font-size: 18px;
                             color: #353637;
+        
                             &:hover {
                                 color: #597193;
-                            } 
+                            }
                         }
                     }
                 }
             }
+        
             &_btn {
                 width: 135px;
                 height: 40px;
@@ -65,13 +76,78 @@ header {
                 font-weight: 400;
                 font-size: 16px;
                 transition: background-color 0.3s ease, color 0.3s ease;
+        
                 &:hover {
                     background-color: #405969;
                     color: #ffffff;
                 }
             }
-               
+            @media (max-width: 768px) {
+                .header_top_btn {
+                    display: none;
+                }
+            }
         }
+        
+        /* Добавляем стили для бургер-меню */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        
+            .bar {
+                width: 30px;
+                height: 3px;
+                background-color: #353637;
+                margin: 3px 0;
+                transition: background-color 0.3s ease;
+            }
+        
+            /* Добавляем стили для анимации бургер-меню при активации */
+            &.active {
+                .bar:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+        
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+        
+                .bar:nth-child(3) {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+        }
+        
+        /* Добавляем медиа-запрос для отображения бургер-меню на мобильных устройствах */
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex;
+            }
+        
+            .header_top__nav__list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 79px;
+                left: 2.5%;
+                background-color: #ffffff;
+                width: 95%;
+                z-index: 1;
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        
+                &.active {
+                    display: flex;
+                }
+        
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+        
 
 
 
@@ -82,6 +158,43 @@ header {
 
         .header_middle {
             min-height: 610px;
+            display: flex;
+            /* Стили для левого div (header_middle__left) */
+            .header_middle__left {
+                padding-top: 194px;
+                width: 447px;
+                background-image: url('ваша_картинка_для_левого_div.jpg');
+                background-size: cover; /* Заполнить всю ширину и высоту */
+                h1 {
+                    color: #3D4550;
+                    font-family: var(--primary-font);
+                    font-weight: 600;
+                    font-size: 45px;
+                }
+                p {
+                    color: #939393;
+                    font-family: var(--secondary-font);
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+
+            /* Стили для правого div (header_middle__right) */
+            .header_middle__right {
+                flex-grow: 1; /* Динамическая ширина экрана */
+                background-image: url('ваша_картинка_для_правого_div.jpg');
+                background-size: cover;
+            }
+        }
+        /* Медиа-запрос для мобильных устройств */
+        @media (max-width: 767px) {
+            .header_middle {
+                flex-direction: column; /* Размещаем блоки вертикально на мобильных устройствах */
+            }
+            .header_middle__left,
+            .header_middle__right {
+                width: 100%; /* Оба блока занимают всю доступную ширину на мобильных устройствах */
+            }
         }
         .header_bottom {
             // max-width: 100%;
