@@ -1,4 +1,3 @@
-// example.js
 export function burgerM() {
     document.addEventListener("DOMContentLoaded", function () {
         const burgerMenu = document.querySelector(".burger-menu");
