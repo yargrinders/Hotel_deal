@@ -1,0 +1,52 @@
+.docs {
+    .red_li {
+        color: red;
+    }
+    min-height: 600px;
+    padding-top: 25px;
+    .tWork {
+        div:nth-child(1) {
+            display: flex;
+            h2 {
+                margin-right: 10px;
+            }
+            a {
+                color: red;
+            }
+        }
+        padding: 30px 0;
+        ol {
+            margin: 0 0 0 32px;
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        ol {
+            margin-top: 10px;
+            margin-left: 30px;
+            .red_li {
+                color: red;
+            }
+        }
+    }
+    
+    .accordion-header {
+        cursor: pointer;
+        background-color: #f1f1f1;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .accordion-header.active {
+        background-color: #ddd;
+    }
+    
+    .accordion-item {
+        margin-bottom: 10px;
+    }
+    
+}
