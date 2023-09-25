@@ -180,8 +180,8 @@ header {
             /* Стили для правого div (header_middle__right) */
             .header_middle__right {
                 flex-grow: 1; /* Динамическая ширина экрана */
-                background-image: url('ваша_картинка_для_правого_div.jpg');
-                background-size: cover;
+                // background-image: url('ваша_картинка_для_правого_div.jpg');
+                // background-size: cover;
             }
         }
         /* Медиа-запрос для мобильных устройств */
