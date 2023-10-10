@@ -1,0 +1,248 @@
+//====================================================================================================
+
+.header {
+  background-color: #eaeff6;
+  // .header__container
+
+  &__container {
+    display: flex;
+    min-height: rem(100);
+    align-items: center;
+	 justify-content: center;
+	 padding: rem(10) rem(15);
+	 @media (max-width:$tablet){
+		min-height: rem(70);
+	 }
+	 @media (max-width:$mobile){
+		 min-height: rem(30); 
+	 }
+  }
+  
+
+  // .header__logo
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__menu
+
+  &__menu {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+	 padding-left: rem(40);
+  }
+}
+.hotel-logo {
+	position: relative;
+	z-index: 5;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #597193;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Open Sans;
+  font-size: rem(26);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  &::before {
+    content: url(../img/logo.svg);
+    top: 0;
+    left: 0;
+    margin-right: 9px;
+	 padding-bottom: 20px;
+
+  }
+}
+.menu {
+  // .menu__icon
+
+  &__icon {
+  }
+
+  // .menu__body
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: rem(123);
+    @media (max-width: $pc) {
+      column-gap: 50px;
+    }
+    @media (max-width: $tablet) {
+      column-gap: 30px;
+    }
+	 @media (max-width:$mobile){
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		row-gap: rem(50);
+		left: -100%;
+		overflow: auto;
+		background-color: #fff;
+		transition: left 0.3s ease 0s;
+		padding: rem(100) rem(15) rem(30) rem(25);
+		&::before{
+			content:'';
+			position: fixed;
+			background-color: #fff;
+			height: rem(60);
+			width: 100%;
+			top: 0;
+			left: -100%;
+			transition: left 0.3s ease 0s;
+		}
+		.menu-open &{
+			left: 0;
+			&::before{
+				left: 0;
+			}
+		}
+		
+	 }
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+	 column-gap: rem(40);
+    @media (max-width: $pc) {
+      column-gap: rem(25);
+    }
+    @media (max-width: $tablet) {
+      column-gap: rem(10);
+      flex-wrap: wrap;
+    }
+	 @media (max-width:$mobile){
+		flex-direction: column;
+		text-align: center;
+		row-gap: rem(25);
+		 
+	 }
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+  &__link {
+    color: #353637;
+    display: block;
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: 1.44;
+    position: relative;
+    transition: color 0.3s ease 0s;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0%;
+      transition: width 0.3s ease 0s;
+      height: 1px;
+      background-color: #597193;
+      left: 0;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #597193;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(25);
+		font-weight: 600;
+    }
+  }
+
+  // .menu__button
+
+  &__button {
+    font-family: Open Sans;
+    font-size: rem(16);
+    line-height: 1.2;
+    font-weight: 400;
+    padding: rem(10) rem(21) rem(10) rem(22);
+    color: #fff;
+    border-radius: rem(4);
+    background-color: #597193;
+    box-shadow: 0px 4px 12px 0px rgba(21, 21, 21, 0.15);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #353637;
+        transition: all 0.3s;
+      }
+    }
+	 @media (max-width:$mobile){
+		 font-size: rem(25); 
+	 }
+  }
+}
+.icon-menu {
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

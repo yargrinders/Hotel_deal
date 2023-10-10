@@ -1,0 +1,89 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-down:before {
+	content: "\e900";
+ }
+ ._icon-arrow-right:before {
+	content: "\e901";
+ }
+ ._icon-bathroom:before {
+	content: "\e902";
+ }
+ ._icon-bed:before {
+	content: "\e903";
+ }
+ ._icon-breakfast:before {
+	content: "\e904";
+ }
+ ._icon-calendar:before {
+	content: "\e905";
+ }
+ ._icon-car:before {
+	content: "\e906";
+ }
+ ._icon-car-p:before {
+	content: "\e907";
+ }
+ ._icon-comment:before {
+	content: "\e908";
+ }
+ ._icon-facebook:before {
+	content: "\e909";
+ }
+ ._icon-four-arrow:before {
+	content: "\e90a";
+ }
+ ._icon-instagram:before {
+	content: "\e90b";
+ }
+ ._icon-mail:before {
+	content: "\e90c";
+ }
+ ._icon-man-food:before {
+	content: "\e90d";
+ }
+ ._icon-map:before {
+	content: "\e90e";
+ }
+ ._icon-market:before {
+	content: "\e90f";
+ }
+ ._icon-payment:before {
+	content: "\e910";
+ }
+ ._icon-play:before {
+	content: "\e911";
+ }
+ ._icon-size:before {
+	content: "\e912";
+ }
+ ._icon-tel:before {
+	content: "\e913";
+ }
+ ._icon-travel:before {
+	content: "\e914";
+ }
+ ._icon-twitter:before {
+	content: "\e915";
+ }
+ ._icon-umbrella:before {
+	content: "\e916";
+ }
+ ._icon-wifi:before {
+	content: "\e917";
+ }
