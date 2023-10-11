@@ -6,6 +6,8 @@ import checkIn from './modules/check-in.js';
 import counT from './modules/count.js'
 import accorDion from './modules/accordion.js'
 import actiVe from './modules/active.js'
+import moRe from './modules/more.js'
+import subscribeEmail from './modules/subscribe.js'
 
 exampLe();
 burgerM();
@@ -15,3 +17,5 @@ scrollToBottom();
 counT();
 accorDion();
 actiVe();
+moRe();
+subscribeEmail();

@@ -1,0 +1,96 @@
+.subscribe-card {
+    min-height: 383px;
+    padding: 73px 0;
+    margin-bottom: 86px;
+    background-color: #B1BED0;
+    border-radius: 10px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .bg-arrows__top {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 98px; 
+        height: 98px;
+        background: url('../img/ico/arrows.png') -10px -10px;
+    }
+    .bg-arrows__bottom {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 98px; 
+        height: 98px;
+        background: url('../img/ico/arrows.png') -128px -10px;
+    }
+    &__title {
+        text-align: center;
+        width: 533px;
+        p {
+            color: #FFFFFF;
+            font-family: var(--secondary-font);
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #334052;
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: 40px;
+            margin-bottom: 44px;
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 32px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .subscribe-card__title {
+            width: auto;
+        }
+    }
+    &__form {
+        input {
+            width: 354px;
+            height: 46px;
+            border-radius: 5px;
+            border: 1px solid #A1A1A1;
+            background-color: #fff;
+            padding: 0 15px;
+            color: #A1A1A1;
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: 14px;
+        }
+        button {
+            width: 107px;
+            height: 45px;
+            border-radius: 5px;
+            background-color: #889CB9;
+            color: #FFFFFF;
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: 16px;
+            padding: 0 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+                background-color: #40556b;
+                color: #fff;
+        }
+    }   
+}
+@media (max-width: 768px) {
+    .subscribe-card {
+        min-height: 450px;
+    }
+    .subscribe-card__form {
+        input {
+            width: auto;
+        }
+    }
+} 
